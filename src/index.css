@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap");
 @import "./styles/variables.css";
 * {
   margin: 0;
@@ -10,7 +11,7 @@ html {
 }
 
 body {
-  font-family: Georgia, serif;
+  font-family: var(--font-body);
   background: #f8f3ec;
   color: #2d2926;
 }
@@ -23,34 +24,74 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-decoration {
+  font-size: 18px;
+  color: var(--color-gold);
+  margin-bottom: 28px;
 }
 
 .hero-subtitle {
-  font-family: Arial, sans-serif;
-  font-size: 13px;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 500;
   letter-spacing: 4px;
   text-transform: uppercase;
-  margin-bottom: 35px;
+  color: var(--color-text-muted);
+  margin-bottom: 32px;
 }
 
 .hero-title {
-  font-size: clamp(60px, 12vw, 130px);
+  font-family: var(--font-heading);
+  font-size: clamp(64px, 13vw, 140px);
   font-weight: 400;
-  line-height: 0.9;
-  letter-spacing: -4px;
+  line-height: 0.8;
+  letter-spacing: -3px;
+  color: var(--color-text);
 }
 
-.hero-title span {
+.hero-name {
   display: block;
-  font-size: 0.45em;
-  margin: 18px 0;
+}
+
+.hero-and {
+  display: block;
+  font-size: 0.35em;
+  line-height: 1;
+  margin: 20px 0;
+  color: var(--color-accent);
   font-style: italic;
 }
 
+.hero-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: min(280px, 70%);
+  margin-top: 45px;
+  color: var(--color-gold);
+}
+
+.hero-divider span:first-child,
+.hero-divider span:last-child {
+  height: 1px;
+  flex: 1;
+  background: var(--color-gold);
+  opacity: 0.5;
+}
+
+.hero-divider span:nth-child(2) {
+  font-size: 12px;
+}
+
 .hero-date {
-  margin-top: 40px;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
+  margin-top: 20px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
   letter-spacing: 3px;
   text-transform: uppercase;
 }
@@ -58,8 +99,89 @@ body {
 .hero-scroll {
   position: absolute;
   bottom: 30px;
-  font-family: Arial, sans-serif;
-  font-size: 11px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: 9px;
   letter-spacing: 2px;
   text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.hero-scroll span {
+  font-size: 16px;
+}
+
+.countdown {
+  min-height: 45vh;
+  padding: var(--space-xl) var(--space-md);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: var(--color-surface);
+}
+
+.countdown-label {
+  font-family: var(--font-body);
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 35px;
+}
+
+.countdown-grid {
+  width: min(700px, 100%);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdown-item span {
+  font-family: var(--font-heading);
+  font-size: clamp(42px, 8vw, 72px);
+  font-weight: 400;
+  line-height: 1;
+  color: var(--color-text);
+}
+
+.countdown-item small {
+  margin-top: 10px;
+  font-family: var(--font-body);
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.countdown-complete {
+  font-family: var(--font-heading);
+  font-size: clamp(32px, 7vw, 60px);
+  font-weight: 400;
+  color: var(--color-accent);
+}
+
+@media (max-width: 600px) {
+  .countdown-grid {
+    gap: 8px;
+  }
+
+  .countdown-item span {
+    font-size: 42px;
+  }
+
+  .countdown-item small {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
 }

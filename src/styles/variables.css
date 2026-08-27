@@ -8,8 +8,8 @@
   --color-gold: #b08a4a;
 
   /* Typography */
-  --font-heading: Georgia, serif;
-  --font-body: Arial, sans-serif;
+--font-heading: "Cormorant Garamond", serif;
+--font-body: "Montserrat", sans-serif;
 
   /* Spacing */
   --space-xs: 8px;
