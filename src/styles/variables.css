@@ -1,0 +1,29 @@
+:root {
+  /* Colors */
+  --color-background: #f8f3ec;
+  --color-surface: #fffdf9;
+  --color-text: #2d2926;
+  --color-text-muted: #716963;
+  --color-accent: #7b2638;
+  --color-gold: #b08a4a;
+
+  /* Typography */
+  --font-heading: Georgia, serif;
+  --font-body: Arial, sans-serif;
+
+  /* Spacing */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 48px;
+  --space-xl: 80px;
+  --space-xxl: 120px;
+
+  /* Layout */
+  --container-width: 1200px;
+
+  /* Effects */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --transition: 300ms ease;
+}
