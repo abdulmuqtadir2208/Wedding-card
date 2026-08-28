@@ -9,6 +9,12 @@ const wedding = {
 
   weddingDate: "2026-11-06T19:30:00+05:30",
 
+  story: {
+  title: "A New Chapter",
+  message:
+    "With the blessings of our families, we invite you to join us as we begin this beautiful new chapter of our lives together.",
+},
+
   venue: {
   name: "Venue Name",
   address: "Venue Address",
