@@ -97,6 +97,28 @@ families: {
   },
 },
 
+nasheeds: [
+  {
+    title: "Your First Nasheed",
+    artist: "Artist Name",
+    src: "/music/nasheed-1.mp3",
+    cover: "/music/covers/nasheed-1.jpg",
+  },
+
+  {
+    title: "Your Second Nasheed",
+    artist: "Artist Name",
+    src: "/music/nasheed-2.mp3",
+    cover: "/music/covers/nasheed-2.jpg",
+  },
+
+  {
+    title: "Your Third Nasheed",
+    artist: "Artist Name",
+    src: "/music/nasheed-3.mp3",
+    cover: "/music/covers/nasheed-3.jpg",
+  },
+],
 
 
 };

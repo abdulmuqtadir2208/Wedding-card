@@ -8,6 +8,7 @@ import Venue from "./components/Venue";
 import Gallery from "./components/Gallery";
 import Families from "./components/Families";
 import Opening from "./components/Opening";
+import MusicPlayer from "./components/MusicPlayer";
 
 
 
@@ -24,6 +25,7 @@ function App() {
       <Gallery />
       <RSVP />
       <Families />
+      <MusicPlayer />
     </main>
   );
 }
