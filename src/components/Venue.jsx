@@ -2,7 +2,7 @@ import wedding from "../data/wedding";
 
 function Venue() {
   return (
-    <section className="venue">
+    <section className="venue" id="venue">
       <div className="section-heading">
         <p className="section-label">The celebration</p>
 

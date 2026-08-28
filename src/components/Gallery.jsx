@@ -5,7 +5,7 @@ function Gallery() {
   const [selectedPhoto, setSelectedPhoto] = useState(null);
 
   return (
-    <section className="gallery">
+    <section className="gallery" id="gallery">
       <div className="section-heading">
         <p className="section-label">Memories</p>
 

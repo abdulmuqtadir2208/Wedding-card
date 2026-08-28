@@ -2,7 +2,7 @@ import wedding from "../data/wedding";
 
 function Hero() {
   return (
-    <section className="hero">
+    <section className="hero" id="home">
       <div className="hero-decoration">✦</div>
 
       <p className="hero-subtitle">

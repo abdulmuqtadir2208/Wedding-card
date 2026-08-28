@@ -1,12 +1,15 @@
+import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Countdown from "./components/Countdown";
 import Events from "./components/Events";
 import Venue from "./components/Venue";
 import Gallery from "./components/Gallery";
 
+
 function App() {
   return (
     <main>
+      <Navbar />
       <Hero />
       <Countdown />
       <Events />
