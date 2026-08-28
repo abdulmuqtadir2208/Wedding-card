@@ -38,6 +38,34 @@ const wedding = {
     address: "Venue Address",
   },
 ],
+
+gallery: [
+  {
+    src: "/images/photo-1.jpg",
+    alt: "Wedding moment",
+  },
+  {
+    src: "/images/photo-2.jpg",
+    alt: "Wedding moment",
+  },
+  {
+    src: "/images/photo-3.jpg",
+    alt: "Wedding moment",
+  },
+  {
+    src: "/images/photo-4.jpg",
+    alt: "Wedding moment",
+  },
+  {
+    src: "/images/photo-5.jpg",
+    alt: "Wedding moment",
+  },
+  {
+    src: "/images/photo-6.jpg",
+    alt: "Wedding moment",
+  },
+],
+
 };
 
 export default wedding;
