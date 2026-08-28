@@ -544,6 +544,53 @@ body {
   letter-spacing: 1px;
 }
 
+/* ================================
+   WEDDING MONOGRAM
+================================ */
+
+.monogram {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 500;
+
+  color: var(--color-accent);
+
+  letter-spacing: -4px;
+
+  transition:
+    transform 300ms ease,
+    color 300ms ease;
+}
+
+.monogram-second {
+  position: relative;
+
+  margin-left: -7px;
+
+  transform: translateY(5px);
+
+  opacity: 0.8;
+}
+
+.navbar-logo:hover .monogram {
+  transform: scale(1.08);
+
+  color: var(--color-text);
+}
+
+.navbar-logo:active .monogram {
+  transform: scale(0.95);
+}
+
 .navbar-logo span {
   color: var(--color-accent);
   font-style: italic;

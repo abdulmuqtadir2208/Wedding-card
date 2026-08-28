@@ -1,10 +1,10 @@
 const wedding = {
   groom: {
-    name: "Areeb Ozair",
+    name: "Mohammed Areeb Ozair",
   },
 
   bride: {
-    name: "Arfiya Sayed",
+    name: "Syeda Arfiya Nazish",
   },
 
   weddingDate: "2026-11-06T19:30:00+05:30",

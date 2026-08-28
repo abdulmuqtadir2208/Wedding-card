@@ -9,20 +9,37 @@ function Navbar() {
 
   return (
     <nav className={`navbar ${menuOpen ? "menu-open" : ""}`}>
-      <a href="#home" className="navbar-logo" onClick={closeMenu}>
-        G <span>&</span> B
+
+      <a
+        href="#home"
+        className="navbar-logo"
+        onClick={closeMenu}
+        aria-label="Back to home"
+      >
+        <span className="monogram">
+          A
+          <span className="monogram-second">A</span>
+        </span>
       </a>
 
       <button
         className="navbar-toggle"
         onClick={() => setMenuOpen(!menuOpen)}
-        aria-label={menuOpen ? "Close navigation" : "Open navigation"}
+        aria-label={
+          menuOpen
+            ? "Close navigation"
+            : "Open navigation"
+        }
         aria-expanded={menuOpen}
       >
         {menuOpen ? "×" : "☰"}
       </button>
 
-      <div className={`navbar-links ${menuOpen ? "open" : ""}`}>
+      <div
+        className={`navbar-links ${
+          menuOpen ? "open" : ""
+        }`}
+      >
         <a href="#home" onClick={closeMenu}>
           Home
         </a>
@@ -39,6 +56,7 @@ function Navbar() {
           Gallery
         </a>
       </div>
+
     </nav>
   );
 }
