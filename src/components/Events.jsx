@@ -31,6 +31,14 @@ function Events() {
               <p>{event.venue}</p>
 
               <p className="event-address">{event.address}</p>
+              <a
+                href={event.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="event-button"
+                >
+                View Location
+                </a>
             </div>
           </Reveal>
         ))}

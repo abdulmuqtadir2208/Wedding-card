@@ -28,20 +28,25 @@ const wedding = {
     time: "11:00 AM",
     venue: "Venue Name",
     address: "Venue Address",
+    mapsUrl: "https://maps.google.com/",
   },
+
   {
     name: "Mehendi",
     date: "2026-11-05",
     time: "6:00 PM",
     venue: "Venue Name",
     address: "Venue Address",
+    mapsUrl: "https://maps.google.com/",
   },
+
   {
     name: "Wedding Ceremony",
     date: "2026-11-06",
     time: "7:30 PM",
     venue: "Venue Name",
     address: "Venue Address",
+    mapsUrl: "https://maps.google.com/",
   },
 ],
 

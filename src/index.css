@@ -763,3 +763,27 @@ body {
     line-height: 1.9;
   }
 }
+
+.event-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 11px 20px;
+
+  border: 1px solid var(--color-accent);
+
+  color: var(--color-accent);
+  text-decoration: none;
+
+  font-family: var(--font-body);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  transition: all var(--transition);
+}
+
+.event-button:hover {
+  background: var(--color-accent);
+  color: var(--color-surface);
+}
