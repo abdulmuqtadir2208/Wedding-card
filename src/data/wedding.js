@@ -77,6 +77,12 @@ gallery: [
   },
 ],
 
+rsvp: {
+  title: "Will You Join Us?",
+  message:
+    "Your presence would make our celebration even more special.",
+},
+
 };
 
 export default wedding;

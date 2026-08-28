@@ -1,3 +1,4 @@
+import RSVP from "./components/RSVP";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Story from "./components/Story";
@@ -18,6 +19,7 @@ function App() {
       <Events />
       <Venue />
       <Gallery />
+      <RSVP />
     </main>
   );
 }
