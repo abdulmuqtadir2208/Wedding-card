@@ -9,6 +9,12 @@ const wedding = {
 
   weddingDate: "2026-11-06T19:30:00+05:30",
 
+  venue: {
+  name: "Venue Name",
+  address: "Venue Address",
+  mapsUrl: "https://maps.google.com/",
+},
+
   events: [
   {
     name: "Haldi",
