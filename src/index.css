@@ -1000,3 +1000,190 @@ body {
     padding: 45px 25px;
   }
 }
+
+/* ================================
+   WEDDING OPENING EXPERIENCE
+================================ */
+
+.opening {
+  position: fixed;
+  inset: 0;
+
+  z-index: 2000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(35, 27, 24, 0.48);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  transition:
+    opacity 900ms ease,
+    visibility 900ms ease;
+}
+
+.opening-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.opening-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.opening-label {
+  margin: 0;
+
+  font-family: var(--font-heading);
+  font-size: clamp(42px, 7vw, 68px);
+  font-weight: 400;
+  font-style: italic;
+
+  color: var(--color-surface);
+
+  letter-spacing: 1px;
+}
+
+.opening-arrow {
+  margin-top: 2px;
+  margin-bottom: 5px;
+
+  font-size: 30px;
+  line-height: 1;
+
+  color: var(--color-surface);
+
+  animation: openingArrow 1.8s ease-in-out infinite;
+}
+
+.opening-heart {
+  position: relative;
+
+  width: 120px;
+  height: 120px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  background: transparent;
+
+  cursor: pointer;
+
+  filter:
+    drop-shadow(0 0 12px rgba(190, 75, 75, 0.65))
+    drop-shadow(0 0 30px rgba(190, 75, 75, 0.35));
+
+  animation: heartPulse 2s ease-in-out infinite;
+
+  transition:
+    transform 300ms ease,
+    filter 300ms ease;
+}
+
+.opening-heart span {
+  position: relative;
+
+  z-index: 2;
+
+  font-size: 105px;
+  line-height: 1;
+
+  color: #c94b55;
+
+  -webkit-text-stroke: 2px rgba(255, 225, 225, 0.8);
+
+  text-shadow:
+    0 0 10px rgba(255, 150, 160, 0.8),
+    0 0 30px rgba(200, 70, 80, 0.6);
+}
+
+.opening-heart:hover {
+  transform: scale(1.08);
+
+  filter:
+    drop-shadow(0 0 18px rgba(190, 75, 75, 0.8))
+    drop-shadow(0 0 45px rgba(190, 75, 75, 0.45));
+}
+
+.opening-heart:active {
+  transform: scale(0.94);
+}
+
+.opening-hint {
+  margin-top: 18px;
+
+  font-family: var(--font-body);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  color: rgba(255, 248, 240, 0.8);
+}
+
+@keyframes heartPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes openingArrow {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.65;
+  }
+
+  50% {
+    transform: translateY(6px);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .opening {
+    padding: 20px;
+  }
+
+  .opening-heart {
+    width: 105px;
+    height: 105px;
+  }
+
+  .opening-heart span {
+    font-size: 92px;
+  }
+
+  .opening-label {
+    font-size: 48px;
+  }
+
+  .opening-hint {
+    font-size: 9px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .opening-heart,
+  .opening-arrow {
+    animation: none;
+  }
+
+  .opening {
+    transition: none;
+  }
+}
