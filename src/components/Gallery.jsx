@@ -1,12 +1,13 @@
 import { useState } from "react";
 import wedding from "../data/wedding";
+import Reveal from "./Reveal";
 
 function Gallery() {
   const [selectedPhoto, setSelectedPhoto] = useState(null);
 
   return (
     <section className="gallery" id="gallery">
-      <div className="section-heading">
+      <Reveal className="section-heading">
         <p className="section-label">Memories</p>
 
         <h2>Our Story</h2>
@@ -14,24 +15,25 @@ function Gallery() {
         <p className="section-description">
           A collection of moments leading to this beautiful celebration.
         </p>
-      </div>
-
-      <div className="gallery-grid">
-        {wedding.gallery.map((photo, index) => (
-          <button
-            className="gallery-item"
-            key={index}
-            onClick={() => setSelectedPhoto(photo)}
-            aria-label={`Open photo ${index + 1}`}
-          >
-            <img
-              src={photo.src}
-              alt={photo.alt}
-              loading="lazy"
-            />
-          </button>
-        ))}
-      </div>
+      </Reveal>
+<div className="gallery-grid">
+  {wedding.gallery.map((photo, index) => (
+    <button
+      className="gallery-item"
+      key={index}
+      onClick={() => setSelectedPhoto(photo)}
+      aria-label={`Open photo ${index + 1}`}
+    >
+      <Reveal>
+        <img
+          src={photo.src}
+          alt={photo.alt}
+          loading="lazy"
+        />
+      </Reveal>
+    </button>
+  ))}
+</div>
 
       {selectedPhoto && (
         <div

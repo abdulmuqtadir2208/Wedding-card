@@ -1,20 +1,21 @@
 import wedding from "../data/wedding";
+import Reveal from "./Reveal";
 
 function Venue() {
   return (
     <section className="venue" id="venue">
-      <div className="section-heading">
-        <p className="section-label">The celebration</p>
+      <Reveal className="section-heading">
+  <p className="section-label">The celebration</p>
 
-        <h2>Join Us</h2>
+  <h2>Join Us</h2>
 
-        <p className="section-description">
-          We would be delighted to celebrate this special day
-          with you.
-        </p>
-      </div>
+  <p className="section-description">
+    We would be delighted to celebrate this special day
+    with you.
+  </p>
+</Reveal>
 
-      <div className="venue-card">
+      <Reveal className="venue-card">
         <div className="venue-symbol">✦</div>
 
         <h3>{wedding.venue.name}</h3>
@@ -35,7 +36,7 @@ function Venue() {
         >
           Get Directions
         </a>
-      </div>
+     </Reveal>
     </section>
   );
 }

@@ -1,9 +1,10 @@
 import wedding from "../data/wedding";
+import Reveal from "./Reveal";
 
 function Events() {
   return (
     <section className="events" id="events">
-      <div className="section-heading">
+      <Reveal className="section-heading">
         <p className="section-label">The celebrations</p>
 
         <h2>Wedding Events</h2>
@@ -11,11 +12,11 @@ function Events() {
         <p className="section-description">
           Join us as we celebrate these special moments together.
         </p>
-      </div>
+      </Reveal>
 
       <div className="events-list">
         {wedding.events.map((event, index) => (
-          <article className="event-card" key={index}>
+          <Reveal className="event-card" key={index}>
             <span className="event-number">
               {String(index + 1).padStart(2, "0")}
             </span>
@@ -31,7 +32,7 @@ function Events() {
 
               <p className="event-address">{event.address}</p>
             </div>
-          </article>
+          </Reveal>
         ))}
       </div>
     </section>
