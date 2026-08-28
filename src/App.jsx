@@ -6,6 +6,7 @@ import Countdown from "./components/Countdown";
 import Events from "./components/Events";
 import Venue from "./components/Venue";
 import Gallery from "./components/Gallery";
+import Families from "./components/Families";
 
 
 
@@ -20,6 +21,7 @@ function App() {
       <Venue />
       <Gallery />
       <RSVP />
+      <Families />
     </main>
   );
 }

@@ -83,6 +83,22 @@ rsvp: {
     "Your presence would make our celebration even more special.",
 },
 
+families: {
+  groom: {
+    title: "Groom's Family",
+    father: "Father's Name",
+    mother: "Mother's Name",
+  },
+
+  bride: {
+    title: "Bride's Family",
+    father: "Father's Name",
+    mother: "Mother's Name",
+  },
+},
+
+
+
 };
 
 export default wedding;
