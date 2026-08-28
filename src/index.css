@@ -1000,7 +1000,6 @@ body {
     padding: 45px 25px;
   }
 }
-
 /* ================================
    WEDDING OPENING EXPERIENCE
 ================================ */
@@ -1039,6 +1038,10 @@ body {
   text-align: center;
 }
 
+/* ================================
+   OPENING TITLE
+================================ */
+
 .opening-label {
   margin: 0;
 
@@ -1052,6 +1055,10 @@ body {
   letter-spacing: 1px;
 }
 
+/* ================================
+   ARROW
+================================ */
+
 .opening-arrow {
   margin-top: 2px;
   margin-bottom: 5px;
@@ -1064,60 +1071,104 @@ body {
   animation: openingArrow 1.8s ease-in-out infinite;
 }
 
+/* ================================
+   HEART BUTTON
+================================ */
+
 .opening-heart {
   position: relative;
 
-  width: 120px;
-  height: 120px;
+  width: 96px;
+  height: 96px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
+  padding: 0;
   border: 0;
+
   background: transparent;
 
   cursor: pointer;
 
-  filter:
-    drop-shadow(0 0 12px rgba(190, 75, 75, 0.65))
-    drop-shadow(0 0 30px rgba(190, 75, 75, 0.35));
-
-  animation: heartPulse 2s ease-in-out infinite;
+  animation: heartPulse 2.4s ease-in-out infinite;
 
   transition:
     transform 300ms ease,
     filter 300ms ease;
 }
 
-.opening-heart span {
+/* ================================
+   HEART SHAPE
+================================ */
+
+.heart-shape {
   position: relative;
 
-  z-index: 2;
+  width: 58px;
+  height: 58px;
 
-  font-size: 105px;
-  line-height: 1;
+  display: block;
 
-  color: #c94b55;
+  background: #c94b55;
 
-  -webkit-text-stroke: 2px rgba(255, 225, 225, 0.8);
+  transform: rotate(-45deg);
 
-  text-shadow:
-    0 0 10px rgba(255, 150, 160, 0.8),
-    0 0 30px rgba(200, 70, 80, 0.6);
+  border-radius: 8px;
+
+  box-shadow:
+    0 0 12px rgba(255, 150, 160, 0.7),
+    0 0 28px rgba(200, 70, 80, 0.45);
 }
+
+.heart-shape::before,
+.heart-shape::after {
+  content: "";
+
+  position: absolute;
+
+  width: 58px;
+  height: 58px;
+
+  background: #c94b55;
+
+  border-radius: 50%;
+}
+
+.heart-shape::before {
+  top: -29px;
+  left: 0;
+}
+
+.heart-shape::after {
+  top: 0;
+  left: 29px;
+}
+
+/* ================================
+   HEART HOVER
+================================ */
 
 .opening-heart:hover {
   transform: scale(1.08);
 
   filter:
-    drop-shadow(0 0 18px rgba(190, 75, 75, 0.8))
-    drop-shadow(0 0 45px rgba(190, 75, 75, 0.45));
+    drop-shadow(0 0 16px rgba(255, 160, 170, 0.8))
+    drop-shadow(0 0 35px rgba(200, 70, 80, 0.45));
 }
 
+/* ================================
+   HEART CLICK
+================================ */
+
 .opening-heart:active {
-  transform: scale(0.94);
+  transform: scale(0.92);
 }
+
+/* ================================
+   OPENING HINT
+================================ */
 
 .opening-hint {
   margin-top: 18px;
@@ -1130,6 +1181,10 @@ body {
   color: rgba(255, 248, 240, 0.8);
 }
 
+/* ================================
+   NORMAL HEART ANIMATION
+================================ */
+
 @keyframes heartPulse {
   0%,
   100% {
@@ -1140,6 +1195,10 @@ body {
     transform: scale(1.05);
   }
 }
+
+/* ================================
+   ARROW ANIMATION
+================================ */
 
 @keyframes openingArrow {
   0%,
@@ -1154,6 +1213,240 @@ body {
   }
 }
 
+/* ================================
+   HEART OPENING CELEBRATION
+================================ */
+
+.heart-opening {
+  animation: heartOpen 900ms ease-out forwards;
+}
+
+.heart-opening .heart-shape {
+  animation: heartBurst 900ms ease-out forwards;
+}
+
+/* ================================
+   CELEBRATION CONTAINER
+================================ */
+
+.celebration {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+}
+
+/* ================================
+   CELEBRATION PARTICLES
+================================ */
+
+.celebration-particle {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 220, 170, 0.95);
+
+  opacity: 0;
+
+  animation: particleBurst 900ms ease-out forwards;
+}
+
+/* ================================
+   PARTICLE DIRECTIONS
+================================ */
+
+.celebration-particle:nth-child(1) {
+  --x: -90px;
+  --y: -55px;
+}
+
+.celebration-particle:nth-child(2) {
+  --x: -65px;
+  --y: -95px;
+}
+
+.celebration-particle:nth-child(3) {
+  --x: -30px;
+  --y: -115px;
+}
+
+.celebration-particle:nth-child(4) {
+  --x: 15px;
+  --y: -105px;
+}
+
+.celebration-particle:nth-child(5) {
+  --x: 55px;
+  --y: -90px;
+}
+
+.celebration-particle:nth-child(6) {
+  --x: 90px;
+  --y: -55px;
+}
+
+.celebration-particle:nth-child(7) {
+  --x: -105px;
+  --y: -10px;
+}
+
+.celebration-particle:nth-child(8) {
+  --x: 105px;
+  --y: -15px;
+}
+
+.celebration-particle:nth-child(9) {
+  --x: -85px;
+  --y: 35px;
+}
+
+.celebration-particle:nth-child(10) {
+  --x: 85px;
+  --y: 35px;
+}
+
+.celebration-particle:nth-child(11) {
+  --x: -60px;
+  --y: 75px;
+}
+
+.celebration-particle:nth-child(12) {
+  --x: 60px;
+  --y: 75px;
+}
+
+.celebration-particle:nth-child(13) {
+  --x: -35px;
+  --y: 105px;
+}
+
+.celebration-particle:nth-child(14) {
+  --x: 35px;
+  --y: 105px;
+}
+
+.celebration-particle:nth-child(15) {
+  --x: -115px;
+  --y: 25px;
+}
+
+.celebration-particle:nth-child(16) {
+  --x: 115px;
+  --y: 20px;
+}
+
+.celebration-particle:nth-child(17) {
+  --x: -15px;
+  --y: -135px;
+}
+
+.celebration-particle:nth-child(18) {
+  --x: 15px;
+  --y: 135px;
+}
+
+/* Smaller particles */
+
+.celebration-particle:nth-child(3n) {
+  width: 4px;
+  height: 4px;
+}
+
+.celebration-particle:nth-child(4n) {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 1px;
+}
+
+/* ================================
+   HEART OPENING ANIMATION
+================================ */
+
+@keyframes heartOpen {
+  0% {
+    transform: scale(1);
+  }
+
+  30% {
+    transform: scale(1.16);
+  }
+
+  55% {
+    transform: scale(0.92);
+  }
+
+  75% {
+    transform: scale(1.06);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ================================
+   HEART GLOW
+================================ */
+
+@keyframes heartBurst {
+  0% {
+    filter:
+      drop-shadow(0 0 12px rgba(255, 150, 160, 0.7));
+  }
+
+  35% {
+    filter:
+      drop-shadow(0 0 25px rgba(255, 180, 190, 1))
+      drop-shadow(0 0 55px rgba(220, 90, 100, 0.8));
+  }
+
+  100% {
+    filter:
+      drop-shadow(0 0 40px rgba(255, 190, 200, 0.15));
+  }
+}
+
+/* ================================
+   PARTICLE BURST
+================================ */
+
+@keyframes particleBurst {
+  0% {
+    opacity: 0;
+
+    transform:
+      translate(-50%, -50%)
+      scale(0);
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+
+    transform:
+      translate(
+        calc(-50% + var(--x)),
+        calc(-50% + var(--y))
+      )
+      scale(1);
+  }
+}
+
+/* ================================
+   MOBILE
+================================ */
+
 @media (max-width: 600px) {
   .opening {
     padding: 20px;
@@ -1164,8 +1457,23 @@ body {
     height: 105px;
   }
 
-  .opening-heart span {
-    font-size: 92px;
+  .heart-shape {
+    width: 52px;
+    height: 52px;
+  }
+
+  .heart-shape::before,
+  .heart-shape::after {
+    width: 52px;
+    height: 52px;
+  }
+
+  .heart-shape::before {
+    top: -26px;
+  }
+
+  .heart-shape::after {
+    left: 26px;
   }
 
   .opening-label {
@@ -1176,6 +1484,10 @@ body {
     font-size: 9px;
   }
 }
+
+/* ================================
+   REDUCED MOTION
+================================ */
 
 @media (prefers-reduced-motion: reduce) {
   .opening-heart,
